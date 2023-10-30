@@ -1,9 +1,24 @@
-import React from 'react';
+
+import DisplayItems from './components/DisplayItems';
+import Header from './components/Header';
+import { trending, apiKey } from './modules/apiLinks';
 
 function App() {
   return (
     <>
-      <h1>hiiiiii</h1>
+      <Header />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <DisplayItems
+        apiEndpoint={`${trending}?api_key=${apiKey}`}
+        numberOfMovies={10}
+        moviesOn={false}
+        tvShowOn={true}
+        itemHeading="Trending Movies"
+        showButtons={true} />
     </>
   );
 }
